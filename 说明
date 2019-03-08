@@ -1,0 +1,12 @@
+1. 下载SDK及安装。
+2. 按照一般步骤安装 ORB_SLAM2 。
+	修改stereo_euroc.cc中的内容,程序见附件
+	添加FileYaml.cc到ORB_SLAM目录下的src中,程序见附件
+	添加FileYaml.h到ORB_SLAM目录下的include中,程序见附件
+	将Tracking.cc中的fx,fy,cx,cy进行修改：其值为去畸变后P_l的值
+		例如：
+			    float fx = 597.935;
+			    float fy = 597.935;
+			    float cx = 476.987;
+			    float cy = 442.158;
+	修改CMakeLists.txt，代码见附件
